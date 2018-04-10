@@ -4,13 +4,16 @@
 #include <sstream>
 #include "Punkt.h"
 #include <iomanip>
+
+
 using namespace std;
 
-void calcField(Punkt *m, int ile)
+void calcField(Punkt *m, int ile)       // funkcja obliczaj¹ca Pole
 {
-    double * dlugosc = new double[ile];
+    double * dlugosc = new double[ile]; // alokacja tablicy
+
     for(int i = 0; i < ile; i++)
-        cout<<"Punkt nr "<< i <<" wynosi: "<<setw(3)<<m[i].x<<", "<<m[i].y<<"\n";
+        cout<<"Punkt nr "<<right<<setw(3)<< i <<" wynosi: "<<setw(3)<<m[i].x<<", "<<m[i].y<<"\n";
     cout<<"-----------\n";
     for(int i = 0; i <ile;i++)
     {
@@ -29,17 +32,15 @@ void calcField(Punkt *m, int ile)
     }
     cout<<"-----------";
     P < 0 ? P=-P : P=P;
-    cout<<"\n\nNowe pole wynosi: "<<P/2;
+    cout<<"\n\nNowe pole wynosi: "<<P/2.0;
 }
 int  Punkt::d_ptr[2] = {0,0};
 
 stringstream dane;
 
-
-
 int main()
 {
-    dane << "12 10 n 3 e 5 s 3 e 5 n 3 e 5 s 2 e 5 n 2 e 10 s 13 w";
+    dane << "12 10 n 3 e 5 s 3 e 5 n 3 e 5 s 2 e 5 n 2 e 11 s 13 w";
     //dane << "6 5 n 5 e 2 s 5 e 3 s 10 w";
     //dane << "4 5 n 4 e 5 s 4 w";
     Punkt Mat[13];
