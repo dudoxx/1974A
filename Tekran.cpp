@@ -28,7 +28,6 @@ void Tekran::wyswietl()
 //-----------
 void Tekran::napisz (int kolumna, int rzad, string tekst)
 {
-    system("cls");
     tresc.replace( (szerokosc_ekranu*rzad) + kolumna, tekst.length(), tekst);
 }
 
