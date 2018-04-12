@@ -1,6 +1,8 @@
 #include "Punkt.h"
 
-Punkt::Punkt() {}
+Punkt::Punkt()  {}
+
+Punkt::Punkt(int xx, int yy) : x(xx), y(yy) {}
 
 Punkt::Punkt(int xx, char dd)
 {
