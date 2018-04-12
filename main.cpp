@@ -36,7 +36,7 @@ void LiczPole(Punkt *m, int ile)       // funkcja obliczaj¹ca Pole
     }
     cout<<"-----------";
     P < 0 ? P=-P : P=P;
-    cout<<"\n\nNowe pole wynosi: "<<P/2.0;
+    cout<<"\n\nPole wynosi: "<<P/2.0;
 }
 int  Punkt::d_ptr[2] = {0,0};
 //--------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ int main()
         Punkty[i] = Punkt(a,k);
     }
 
-    Tekran ekran('.');
+    Tekran ekran(' ');
   /*  ekran.napisz(3,3,"Dudo");
     ekran.wyswietl();
     getchar();
@@ -137,9 +137,9 @@ int main()
 
     }
 
-    plik<<ekran.wyswietl();
-    //LiczPole(Punkty,n);
-   // plik  ekran.wyswietl();
+
+    LiczPole(Punkty,n);
+    ekran.wyswietl();
 
 
 
